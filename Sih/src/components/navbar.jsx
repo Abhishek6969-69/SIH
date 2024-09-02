@@ -3,7 +3,7 @@ import logo from './asset/logo.png'; // Adjust the path based on your structure
 
 function Navbar() {
   return (
-    <div className=' flex items-center gap-5   p-3  bg-[#94B8DB] '>
+    <div className=' flex items-center gap-5   p-3  bg-[#0D0A2C]  text-white'>
         <div className=' w-16  '>
             <img src={logo} alt='logo'  />
         </div>
