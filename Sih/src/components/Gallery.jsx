@@ -1,0 +1,28 @@
+import React from 'react'
+import { data } from '../utility/data'
+import Navbar from './navbar';
+import Gallerycard from './Gallerycard';
+function Gallery() {
+   
+  return (
+    <div className=' '>
+        <Navbar />
+        <div className=' flex flex-wrap gap-8 '>
+      {
+      
+        data.map((m)=>{
+           return (
+           
+           <Gallerycard data={m} />
+           
+           )
+        })
+       
+      }
+      </div>
+      
+    </div>
+  )
+}
+
+export default Gallery

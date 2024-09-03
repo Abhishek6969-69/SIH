@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "./navbar";
 
 function Body() {
   return (
+
     <div className="  text-black  bg-[#0D0A2C]">
+      <Navbar />
       <div className='bg-[url("https://imageio.forbes.com/specials-images/imageserve/5e020def4e2917000783d582/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds")] w-[1300px] bg-no-repeat mt-[-64px] bg-cover  h-[630px]'>
         <div className=" mt-16    px-6">
           <h1 className=" text-[4rem] max-w-[900px] capitalize ">

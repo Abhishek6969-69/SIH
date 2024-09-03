@@ -1,0 +1,5 @@
+/* src/Chat.css */
+.chat-container {
+    @apply bg-gray-800 text-white ;
+  }
+  
