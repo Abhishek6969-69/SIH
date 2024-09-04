@@ -1,9 +1,14 @@
+// index.js or app.js
+
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
+const mainrouter = require('./routes/index'); // Import the router correctly
 const socketIo = require('socket.io');
 
 const app = express();
+// Use the router with '/api/v1' prefix
+
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
@@ -14,11 +19,13 @@ const io = socketIo(server, {
   },
 });
 
-// Configure CORS for Express.js routes
+
 app.use(cors({
   origin: 'http://localhost:5173',
 }));
 
+app.use(express.json()); // Add this line to parse JSON bodies
+app.use('/api/v1', mainrouter); 
 io.on('connection', (socket) => {
   console.log('New client connected');
 
@@ -26,7 +33,6 @@ io.on('connection', (socket) => {
     console.log('Client disconnected');
   });
 
-  // Change the event name here to match the client
   socket.on('new_message', (msg) => {
     io.emit('broadcast', msg);
   });

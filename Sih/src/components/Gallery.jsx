@@ -6,8 +6,8 @@ function Gallery() {
    
   return (
     <div className=' '>
-        <Navbar />
-        <div className=' flex flex-wrap gap-8 '>
+        
+        <div className=' flex flex-wrap gap-8   bg-[#F5F0F0]'>
       {
       
         data.map((m)=>{

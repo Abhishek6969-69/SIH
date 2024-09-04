@@ -1,51 +1,52 @@
 import React from "react";
 import Navbar from "./navbar";
+import { Link } from "react-router-dom";
 
 function Body() {
   return (
 
-    <div className="  text-black  bg-[#0D0A2C]">
-      <Navbar />
-      <div className='bg-[url("https://imageio.forbes.com/specials-images/imageserve/5e020def4e2917000783d582/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds")] w-[1300px] bg-no-repeat mt-[-64px] bg-cover  h-[630px]'>
+    <div className="  text-white  bg-[#1E1E1E]">
+    
+      <div className=' filter  brightness-100 bg-[url("https://imageio.forbes.com/specials-images/imageserve/5e020def4e2917000783d582/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds")] w-[1300px] bg-no-repeat mt-[-64px] bg-cover  h-[630px]'>
         <div className=" mt-16    px-6">
-          <h1 className=" text-[4rem] max-w-[900px] capitalize ">
+          <h1 className=" text-[4rem] max-w-[900px] capitalize text-white ">
             Welcome to the Alumni-Student Interaction Platform
           </h1>
         </div>
         <div className=" mt-20 ml-8">
-          <p className=" text-[2rem] capitalize">
+          <p className=" text-[2rem] capitalize text-white">
             Connecting the Past, Inspiring the Future
           </p>
-          <button className="  ml-10 mt-20 px-4 py-3 w-36  rounded-md capitalize bg-pink-400">
+       <Link to="/signup">  <button className="  ml-10 mt-20 px-4 py-3 w-36  rounded-md capitalize bg-pink-400  ">
             Sign Up
-          </button>
+          </button></Link> 
         </div>
       </div>
-      <div className=" text-white bg-[rgb(13,10,44)]   opacity-95 mx ">
+      <div className=" text-white  bg-[#1E1E1E]opacity-95 mx ">
         <div className="  text-[4rem]  py-12 px-8 mx-7">
           {" "}
           <h1>Why Join the Platform?</h1>
         </div>
 
         <div className=" grid grid-cols-2 px-8 gap-2 gap-y-3 p-2 mx-8 ">
-          <div className=" border max-w-lg p-6">
+          <div className=" border max-w-lg p-6 hover:scale-125">
             <h2 className="  font-bold text-[20px]">Enhance Alumni Engagement</h2>
             <p>
               Stay connected with your alma mater and contribute to the success
               of current students.
             </p>
           </div>
-          <div className=" border max-w-lg p-6">
+          <div className=" border max-w-lg p-6 hover:scale-125">
             <h2 className=" font-bold">Mentorship and Guidance</h2>
             <p>
               Inspire the next generation with your knowledge and expertise.
             </p>
           </div>
-          <div className=" border max-w-lg p-6 ">
+          <div className=" border max-w-lg p-6 hover:scale-125 ">
             <h2 className=" font-bold">Build a Supportive Network</h2>
             <p>Create lifelong connections with fellow alumni and students.</p>
           </div>
-          <div className=" border max-w-lg p-6">
+          <div className=" border max-w-lg p-6 hover:scale-125">
             <h2 className=" font-bold">Access Valuable Resources</h2>
             <p>
               Find career guidance, industry trends, and real-world advice from
@@ -54,7 +55,7 @@ function Body() {
           </div>
         </div>
       </div>
-      <div className=" bg-[#0D0A2C]  text-white">
+      <div className="  text-white  bg-[#1E1E1E]">
         <div className=" ">
             <h1 className="text-[4rem]  py-12 px-8  mx-8">Features of the Platform</h1>
         </div>
@@ -73,7 +74,7 @@ function Body() {
             </div>
         </div>
       </div>
-      <div className=" grid grid-cols-3 bg-[#0D0A2C]  mt-16  mx-12 text-white">
+      <div className=" grid grid-cols-3 bg-[#F5F0F0]]  mt-16  mx-12 ">
         <div className=" border col-span-2">
             <div>
                 <h1 className=" text-[45px]">Ensuring a Safe and Secure Environment</h1>
@@ -95,7 +96,7 @@ function Body() {
             <img className=" bg-cover h-[450px] p-6" src="https://builtin.com/sites/www.builtin.com/files/styles/og/public/2024-03/Blockchain%20Technology.jpg " />
         </div>
       </div>
-      <div className=" mt-16  mx-12 text-white max-w-5xl ">
+      <div className=" mt-16  mx-12  max-w-5xl ">
         <div>
             <h1 className="text-[45px]">Join the Community</h1>
         </div>

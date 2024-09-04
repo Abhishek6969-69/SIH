@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
-
+import Navbar from './navbar'
+import bg from './asset/bg.jpg';
 // Initialize socket outside of the component to avoid re-creating it on every render
 const socket = io('http://localhost:3000');
 
@@ -51,7 +52,17 @@ function Chat() {
   };
 
   return (
-    <div className="p-4 max-w-3xl mx-auto bg-gray-800 text-white h-screen flex flex-col">
+    <div>
+     
+    <div className="p-4 max-w-3xl mx-auto bg-gray-800 text-white h-[640px] flex flex-col" style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity:""
+        }}>
+    
+     
       {error && (
         <div className="bg-red-500 text-white p-2 mb-2">
           Error connecting to server: {error}
@@ -63,8 +74,8 @@ function Chat() {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`p-2 mb-2 rounded-md ${
-                  index % 2 === 0 ? 'bg-blue-500 self-end' : 'bg-gray-700'
+                className={`p-2 mb-2 rounded-md  ${
+                  index % 2 === 0 ? 'bg-green-500 self-end' : 'bg-blue-500  self-start'
                 }`}
               >
                 {msg}
@@ -88,9 +99,10 @@ function Chat() {
           className="ml-2 p-2 bg-blue-500 rounded-md text-white"
           onClick={handleSendMessage}
         >
-          Send
+          Send  
         </button>
       </div>
+    </div>
     </div>
   );
 }

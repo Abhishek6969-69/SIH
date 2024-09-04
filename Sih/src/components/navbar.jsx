@@ -1,9 +1,10 @@
 import React from 'react'
 import logo from './asset/logo.png'; // Adjust the path based on your structure
 import { Link } from 'react-router-dom';
+// bg-[#0D0A2C]
 function Navbar() {
   return (
-    <div className=' flex items-center gap-5   p-3  bg-[#0D0A2C]  text-white'>
+    <div className=' flex items-center gap-5  bg-[#1E1E1E]  p-3   text-white'>
         <div className=' w-16  '>
             <img src={logo} alt='logo'  />
         </div>
@@ -16,14 +17,13 @@ function Navbar() {
                 <li>Carrer Guidence</li>
                 <li>Event</li>
                 <li>Placement Assistance</li>
+                <li><Link to="/chatbot">Chatbot</Link></li>
                 <li>About us</li>
               
             </ul>
         </div>
-        <div className=' flex'>
-           <button className=' mr-3'>login</button>
-          
-        </div>
+       
+       
     </div>
   )
 }
